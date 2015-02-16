@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Middleman base" %></title>
+    
+    <%= stylesheet_link_tag "/assets/css/all" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <%= partial "_templates/partials/header.html" %>
+    <%= yield %>
+    <%= partial "_templates/partials/footer.html" %>
+    <%= javascript_include_tag  "/assets/js/all" %>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+//--------------------main--------------------------
+//the bit between header and footer
+
+
+main {
+  
+}
+
+//text link in normal copy
+.content a {
+  
+  &:hover, &:focus {
+    color: $color-hilite;
+  }
+  
+}
+
+

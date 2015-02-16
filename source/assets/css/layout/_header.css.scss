@@ -1,0 +1,56 @@
+//----------------header----------------------
+
+//header
+header {
+	
+	
+} //END: header
+
+//header logo (h1 on homepage)
+.logo {
+	background: url(/assets/images/logo.png) no-repeat center;
+	margin: 0;
+  text-indent: -999em;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 100px;
+  width: auto;
+
+  @include bp(phablet, true){
+  	height: 140px;
+	}
+}
+
+//homepage logo animation (webkit)
+h1.logo {
+  -webkit-animation-name: logo;
+  -webkit-animation-duration: .9s; 	  
+}
+@-webkit-keyframes logo {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+
+}//END: homepage logo animation
+
+
+
+
+/*---------------------
+	header navigation
+-----------------------*/

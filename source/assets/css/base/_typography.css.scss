@@ -1,0 +1,60 @@
+//--------------typography-----------------
+/* If serving on IIS, check MIME types - 
+SVG and WOFF may need adding to list of MIME types in IIS */
+
+
+
+// headings and texts
+
+%text {
+    font-family: sans-serif;
+}
+%textbold {
+	font-family: sans-serif;
+    font-weight: normal;
+}
+%heading {
+	font-family: sans-serif;
+    font-weight: normal;
+}
+%headingthin {
+	font-family: sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+	@extend %heading;
+    @include fontsize($hdg-lrg, 1);
+    @include bp(phablet, true){
+    	@include fontsize($hdg-xlrg, 1);
+    }
+    span {
+        font-size: 60%;
+        display: block;
+    }
+}
+h2 {
+	@extend %heading;
+    @include fontsize($hdg-sml, 1);
+    @include bp(phablet, true){
+        @include fontsize($hdg-mid, 1);
+    }	
+	margin: 1.5em 0 .5em;
+}
+h3 {
+	@extend %headingthin;
+    @include fontsize($hdg-sml, 1);
+    @include bp(phablet, true){
+        @include fontsize($hdg-mid, 1);
+    }   
+	margin: 1.5em 0 .5em;
+}
+p, li, form {
+	@extend %text;
+	@include fontsize($txt-m, 1.4);
+}
+li p, li li {
+    font-size: 1em;
+}
+
+
